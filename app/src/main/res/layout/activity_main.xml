@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="10dp"
+            android:gravity="center"
             android:text="发送指令后显示测试项"/>
     </ScrollView>
 
@@ -36,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:rowCount="10"
+            android:rowCount="13"
             android:columnCount="4">
 
 
@@ -50,7 +51,7 @@
                 android:layout_columnSpan="2"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="开启服务"
+                android:text="获取属性值"
                 android:onClick="onClick"
                 />
 
@@ -174,7 +175,6 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
                 android:text="录音测试："
-                android:onClick="onClick"
                 />
 
 
@@ -215,15 +215,15 @@
                 />
 
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="4"
                 android:layout_column="0"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="led测试:"
+                android:layout_gravity="center"
                 />
 
             <Button
@@ -233,8 +233,8 @@
                 android:layout_column="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="开红灯"
+                android:onClick="onClick"
                 />
 
             <Button
@@ -244,8 +244,8 @@
                 android:layout_column="2"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="开绿灯"
+                android:onClick="onClick"
                 />
 
             <Button
@@ -255,94 +255,116 @@
                 android:layout_column="3"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="关闭led灯"
+                android:onClick="onClick"
                 />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="5"
                 android:layout_column="0"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:layout_gravity="center"
+                android:text="闪光灯测试："
 
                 />
 
             <Button
+                android:id="@+id/bt_Flash1Test"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="5"
                 android:layout_column="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="闪关灯 1"
+                android:onClick="onClick"
                 />
 
             <Button
+                android:id="@+id/bt_Flash2Test"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="5"
                 android:layout_column="2"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="闪光灯 2"
+                android:onClick="onClick"
                 />
 
             <Button
+                android:id="@+id/bt_CloseFlash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="5"
                 android:layout_column="3"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="闪光灯关"
+                android:onClick="onClick"
 
                 />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="6"
                 android:layout_column="0"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:layout_gravity="center"
+                android:text="连接测试："
 
                 />
 
             <Button
+                android:id="@+id/bt_WiFiTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="6"
                 android:layout_column="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
-
+                android:text="wifi测试"
+                android:onClick="onClick"
                 />
 
             <Button
+                android:id="@+id/bt_BlueToothTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="6"
                 android:layout_column="2"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="蓝牙测试"
+                android:onClick="onClick"
 
                 />
             <Button
+                android:id="@+id/bt_GpsTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="6"
                 android:layout_column="3"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="Gps测试"
+                android:onClick="onClick"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="按键测试"
 
                 />
 
@@ -350,21 +372,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="7"
-                android:layout_column="0"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:text="发送指令"
-
-                />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="7"
                 android:layout_column="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="音量键"
 
                 />
 
@@ -375,7 +386,7 @@
                 android:layout_column="2"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="电源键"
 
                 />
 
@@ -386,18 +397,19 @@
                 android:layout_column="3"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="耳机键"
 
                 />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="8"
                 android:layout_column="0"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:layout_gravity="center"
+                android:text="传感器测试"
 
                 />
 
@@ -408,7 +420,7 @@
                 android:layout_column="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="地磁"
 
                 />
 
@@ -419,7 +431,7 @@
                 android:layout_column="2"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="重力"
 
                 />
 
@@ -430,18 +442,19 @@
                 android:layout_column="3"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+                android:text="陀螺仪"
 
                 />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="9"
                 android:layout_column="0"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:text="发送指令"
+               android:layout_gravity="center"
+                android:text="插卡存储测试"
 
                 />
 
@@ -457,9 +470,162 @@
                 android:text="SIM测试"
                 />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="内部SD"
 
+                />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_column="3"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="外部SD"
 
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="10"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="屏幕测试"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="10"
+                android:layout_column="1"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:onClick="onClick"
+                android:text="LCD测试"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="10"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="触摸tp测试"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="10"
+                android:layout_column="3"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="背光测试"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="其他测试"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_column="1"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:onClick="onClick"
+                android:text="震动测试"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="接近测试"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_column="3"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="光感测试"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="其他测试"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_column="1"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:onClick="onClick"
+                android:text="FM测试"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="指纹模组"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_column="3"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="OTG测试"
+
+                />
 
         </GridLayout>
 
